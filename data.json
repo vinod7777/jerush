@@ -1,0 +1,450 @@
+{
+  "company": {
+    "name": "Jerush",
+    "subtitle": "Pure Honey. Pure Trust.",
+    "description": "Experience the raw essence of nature. Sourced directly from local hives, delivered with integrity to your table.",
+    "contact": {
+      "phone": "+91 80193 97888",
+      "email": "jerushbrands@gmail.com",
+      "address": "Medchal Hyderabad Telangana India-501401",
+      "whatsapp": "https://wa.me/918019397888"
+    },
+    "social": {
+    
+      "instagram": "https://www.instagram.com/jerush_brands?igsh=dXV1bWFsamUzdXVy",
+      "whatsapp": "https://wa.me/918019397888?text=Hi,%20I%20would%20like%20to%20order%20Jerush%20Honey"
+    }
+  },
+  "features": [
+    {
+      "icon": "eco",
+      "title": "100% Natural",
+      "description": "Zero artificial additives or preservatives. Just pure nectar."
+    },
+    {
+      "icon": "block",
+      "title": "No Added Sugar",
+      "description": "Unadulterated sweetness straight from the honeycomb."
+    },
+    {
+      "icon": "location_on",
+      "title": "Locally Sourced",
+      "description": "Supporting local beekeepers and sustainable ecosystems."
+    },
+    {
+      "icon": "health_and_safety",
+      "title": "Hygienically Packed",
+      "description": "State-of-the-art bottling to ensure absolute safety."
+    }
+  ],
+  "process": [
+    {
+      "title": "Sustainable Beekeeping",
+      "description": "We partner with ethical beekeepers who prioritize the health of the colony over mass production.",
+      "icon": "hive",
+      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBpDMRXb6vz438qHLvhehQAre-R4hloY3THXGS11EliAd7J23ei41ZrsBxb08VO6M9vtJ855PrK-clTjWHnR9brajoLcE8SY8M4VeIJ9HU-aprs306ejg7PvRA4LPQ-Lk6wnZ3ItX2esghr1oSbUebVGU0jFbrvqEy3PWOUSsjt9MCado2tGfoHxWP3FANzduV6LJrRPGEVbsv8LcfMdl8C4TP0hx4JFid9HLMSuXUUR2usjLGgF8pGk4ZFIHTq798HskmSHToRJfU"
+    },
+    {
+      "title": "Gentle Extraction",
+      "description": "Honey is cold-extracted to retain all natural enzymes and antioxidants. Never heated above hive temperature.",
+      "icon": "water_drop",
+      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBbnOW4dYDG5IyWPjdwFbzNYB6bAoE3SkA-9SwZ7SnbcyYMR6N2SmvQyTgI_bEbiAHcCmGvr-oyOp36xZJRH1yQzcvyoue89W4hRual2o23QBesOoMi3mwHA5UuEQ5m2mNYMUhgcZvR-yeQGru255N1VKP2aWqSt0gPB5ZHtC5BcC5zb26xAU36kqaahf88ZYVRIpqNFw3hV6u-f0zBZr74mHchtX5gPAg1LlR3YI1uh1CUFoJaziTPnZfffRU4H3lbRm__p4XkFIE"
+    },
+    {
+      "title": "Lab Testing",
+      "description": "Every batch is rigorously tested for purity, sugar content, and absence of antibiotics.",
+      "icon": "science",
+      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBSg508BF-nP3z5_UpXxAi8SzRxYVbjl0GJDK-Yz62dEziNjHFlL7vBoxaXg5mJAkKhkQvZlqauR-JoQEycLo4KonG6YwDzQOjTAa3DocgkmtFlpBwzDxEuZaRboo4D0lUos0YZ53d1my3K2cMFzNua2dYwnNRwyaMnvkzLofSTgTTVk7KYb3arhsQHa1Hdbjhw1UKi4e5ljgezyQ-pzObVuBoYKDURZOLXZnvu9980zYcFR5V_KSzzRCyEeFm6SnVbavNqLJnhVk4"
+    },
+    {
+      "title": "Premium Bottling",
+      "description": "Sealed in sterilized glass jars to lock in freshness and delivered straight to your doorstep.",
+      "icon": "inventory_2",
+      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuC_UPtSBp6dKuX-8VNFgesx2G0xiLVmAr972TPXiH_RiECp2b7ewNfP0hY1GmbPtKdLMxQCeTDezfHau_lyOpG6ORzTbVR0iOPFVEu5UIrpIB8L2yRaIAExtpVec86jqbQmOwvZwNlBtDlk8CiWg7D2rDA-_5BHtsSTzdarWpsjnEm88PUlIwbsiU94dwE_5h4oD6zFSg3LWjfuQ6sffbd2HB3JLgR3NaKLLw-t4E9vJdFRzBZACzzLhwDzhS63CNlszww-FbREHuI"
+    }
+  ],
+  "products": [
+    {
+      "id": "multi-flavor-honey",
+      "name": "Jerush Multi Flavor Honey",
+      "shortName": "Multi Flavor Honey",
+      "slug": "multi-flavor-honey",
+      "tag": "Blended Goodness",
+      "tags": ["Multi Flavor", "100% Natural"],
+      "shortDescription": "A delicious blend of various floral sources.",
+      "description": "Jerush Multi Flavor Honey is a carefully blended honey sourced from multiple floral nectars, offering a balanced sweetness, floral aroma, and smooth texture suitable for daily use.",
+      "price": 650,
+      "originalPrice": 750,
+      "discount": "Save 13%",
+      "sizes": ["250gm", "500gm", "1kg"],
+      "sizePrices": {
+        "250gm": 170,
+        "500gm": 340,
+        "1kg": 650
+      },
+      "images": {
+        "main": "img/multi_main.png",
+        "texture": "img/multi_texture.png",
+        "source": "img/multi_source.png",
+        "farm" : "img/adithya_farm2.jpeg"
+      },
+      "features": [
+        { "icon": "grass", "label": "Flavor Diversity", "value": "Rich Blend" },
+        { "icon": "nature", "label": "Source", "value": "Local Flora" },
+        { "icon": "thermostat", "label": "Processing", "value": "Unheated" }
+      ],
+      "tasteProfile": {
+        "summary": "Balanced, Floral, Fruity",
+        "sweetness": { "label": "Medium", "percentage": 70 },
+        "intensity": { "label": "Medium", "percentage": 60 },
+        "texture": { "label": "Smooth", "percentage": 70 },
+        "notes": [
+          { "icon": "apple", "label": "Fruity", "color": "text-red-500" },
+          { "icon": "local_florist", "label": "Floral", "color": "text-purple-500" },
+          { "icon": "cookie", "label": "Caramel", "color": "text-yellow-600" }
+        ]
+      },
+      "benefits": [
+        { "icon": "energy_savings", "title": "Sustained Energy", "description": "Provides long-lasting natural energy." },
+        { "icon": "wb_sunny", "title": "Mood Booster", "description": "Helps improve mood naturally." },
+        { "icon": "favorite", "title": "Heart Health", "description": "Supports cardiovascular wellness." },
+        { "icon": "respiratory_rate", "title": "Cough Relief", "description": "Soothes throat irritation." }
+      ],
+      "labAnalysis": {
+        "batch": "JH-MF-001",
+        "status": "PASSED",
+        "metrics": [
+          { "label": "Moisture Content", "value": "18%", "subtext": "(<20%)", "percentage": 18, "color": "bg-green-500" },
+          { "label": "Purity", "value": "100%", "subtext": "(No Additives)", "percentage": 100, "color": "bg-primary" },
+          { "label": "C4 Sugars", "value": "0%", "subtext": "(Undetected)", "percentage": 0, "color": "bg-green-500" }
+        ]
+      },
+      "pairings": [
+        { "title": "Tea", "description": "Perfect natural sweetener for tea.", "image": "https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?q=80&w=800&auto=format&fit=crop" },
+        { "title": "Toast", "description": "Great on warm toast or bread.", "image": "https://images.unsplash.com/photo-1484723050470-265c7562595d?q=80&w=800&auto=format&fit=crop" },
+        { "title": "Desserts", "description": "Enhances desserts naturally.", "image": "https://images.unsplash.com/photo-1563729768-6af7c46d66c1?q=80&w=800&auto=format&fit=crop" }
+      ]
+    },
+
+    {
+      "id": "jamun-honey",
+      "name": "Jerush Jamun Honey",
+      "shortName": "Jamun Honey",
+      "slug": "jamun-honey",
+      "tag": "Medicinal Honey",
+      "tags": ["Jamun", "Medicinal Properties"],
+      "shortDescription": "Dark honey known for medicinal benefits.",
+      "description": "Jerush Jamun Honey is sourced from Jamun flowers and is traditionally valued for its low glycemic index and medicinal qualities.",
+      "price": 650,
+      "originalPrice": 750,
+      "discount": "Save 13%",
+      "sizes": ["250gm", "500gm", "1kg"],
+      "sizePrices": {
+        "250gm": 170,
+        "500gm": 340,
+        "1kg": 650
+      },
+      "images": {
+        "main": "img/jamun_main.png",
+        "texture": "img/jamun_texture.png",
+        "source": "img/jamun_source.png",
+        "farm" : "img/adithya_farm3.jpeg"
+      },
+      "features": [
+        { "icon": "local_pharmacy", "label": "Medicinal", "value": "High" },
+        { "icon": "spa", "label": "Taste", "value": "Distinct" },
+        { "icon": "thermostat", "label": "Processing", "value": "Unheated" }
+      ],
+      "tasteProfile": {
+        "summary": "Woody, Slightly Bitter",
+        "sweetness": { "label": "Medium", "percentage": 65 },
+        "intensity": { "label": "Medium", "percentage": 65 },
+        "texture": { "label": "Smooth", "percentage": 75 },
+        "notes": [
+          { "icon": "forest", "label": "Woody", "color": "text-gray-700" },
+          { "icon": "grass", "label": "Earthy", "color": "text-green-600" },
+          { "icon": "local_drink", "label": "Herbal", "color": "text-teal-500" }
+        ]
+      },
+      "benefits": [
+        { "icon": "bloodtype", "title": "Blood Sugar Support", "description": "Helps manage blood sugar levels." },
+        { "icon": "clean_hands", "title": "Detox", "description": "Supports liver detoxification." },
+        { "icon": "mood", "title": "Antioxidant Rich", "description": "Protects cells from damage." },
+        { "icon": "healing", "title": "Healing", "description": "Aids wound healing." }
+      ],
+      "labAnalysis": {
+        "batch": "JH-JA-002",
+        "status": "PASSED",
+        "metrics": [
+          { "label": "Moisture Content", "value": "17.8%", "subtext": "(<20%)", "percentage": 18, "color": "bg-green-500" },
+          { "label": "Purity", "value": "100%", "subtext": "(No Additives)", "percentage": 100, "color": "bg-primary" },
+          { "label": "C4 Sugars", "value": "0%", "subtext": "(Undetected)", "percentage": 0, "color": "bg-green-500" }
+        ]
+      },
+      "pairings": [
+        { "title": "Warm Milk", "description": "Best consumed at night.", "image": "https://images.unsplash.com/photo-1563201138-361363245d73?q=80&w=800&auto=format&fit=crop" },
+        { "title": "Herbal Tea", "description": "Enhances herbal teas.", "image": "https://images.unsplash.com/photo-1597481499750-3e6b22637e12?q=80&w=800&auto=format&fit=crop" }
+      ]
+    },
+    {
+  "id": "litchi-honey",
+  "name": "Jerush Litchi Honey",
+  "shortName": "Litchi Honey",
+  "slug": "litchi-honey",
+  "tag": "Exotic Sweetness",
+  "tags": ["Litchi", "Fruity Aroma"],
+  "shortDescription": "Sweet and aromatic honey from litchi flowers.",
+  "description": "Jerush Litchi Honey is light in color with a naturally sweet and fruity aroma, sourced from litchi orchards and ideal for beverages and desserts.",
+  "price": 650,
+  "originalPrice": 750,
+  "discount": "Save 13%",
+  "sizes": ["250gm", "500gm", "1kg"],
+  "sizePrices": {
+    "250gm": 170,
+    "500gm": 340,
+    "1kg": 650
+  },
+  "images": {
+    "main": "img/litchi_main.png",
+    "texture": "img/litchi_texture.png",
+    "source": "img/litchi_source.png",
+    "farm" : "img/adithya_farm.jpeg"
+  },
+  "features": [
+    { "icon": "local_florist", "label": "Aroma", "value": "Fruity" },
+    { "icon": "eco", "label": "Source", "value": "Natural Orchards" },
+    { "icon": "thermostat", "label": "Processing", "value": "Unheated" }
+  ],
+  "tasteProfile": {
+    "summary": "Sweet, Fruity, Mild",
+    "sweetness": { "label": "High", "percentage": 80 },
+    "intensity": { "label": "Mild", "percentage": 50 },
+    "texture": { "label": "Smooth", "percentage": 80 },
+    "notes": [
+      { "icon": "local_dining", "label": "Fruity", "color": "text-orange-500" },
+      { "icon": "air", "label": "Floral", "color": "text-purple-300" }
+    ]
+  },
+  "benefits": [
+    { "icon": "mood", "title": "Energy Booster", "description": "Provides quick natural energy." },
+    { "icon": "verified_user", "title": "Immunity Support", "description": "Supports immune health." }
+  ],
+  "labAnalysis": {
+    "batch": "JH-LI-003",
+    "status": "PASSED",
+    "metrics": [
+      { "label": "Moisture Content", "value": "17.7%", "subtext": "(<20%)", "percentage": 17, "color": "bg-green-500" },
+      { "label": "Purity", "value": "100%", "subtext": "(No Additives)", "percentage": 100, "color": "bg-primary" }
+    ]
+  },
+  "pairings": [
+    { "title": "Yogurt", "description": "Perfect with yogurt.", "image": "https://images.unsplash.com/photo-1488477181946-6428a0291777?q=80&w=800&auto=format&fit=crop" },
+    { "title": "Lemonade", "description": "Adds fruity sweetness.", "image": "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?q=80&w=800&auto=format&fit=crop" }
+  ]
+},
+{
+  "id": "forest-multi-flavor-honey",
+  "name": "Jerush Forest Multi Flavor Honey",
+  "shortName": "Forest Honey",
+  "slug": "forest-multi-flavor-honey",
+  "tag": "Wild Harvest",
+  "tags": ["Forest Honey", "Wild Floral"],
+  "shortDescription": "Raw honey collected from deep forest regions.",
+  "description": "Jerush Forest Multi Flavor Honey is dark, mineral-rich, and harvested from wild forest flora, offering strong flavor and high nutrition.",
+  "price": 670,
+  "originalPrice": 780,
+  "discount": "Save 14%",
+  "sizes": ["250gm", "500gm", "1kg"],
+  "sizePrices": {
+    "250gm": 190,
+    "500gm": 350,
+    "1kg": 670
+  },
+  "images": {
+    "main": "img/forest_main.png",
+    "texture": "img/forest_texture.png",
+    "source": "img/forest_source.png",
+    "farm" : "img/adithya_farm.jpeg"
+  },
+  "features": [
+    { "icon": "forest", "label": "Source", "value": "Wild Forest" },
+    { "icon": "science", "label": "Minerals", "value": "High" },
+    { "icon": "thermostat", "label": "Processing", "value": "Raw & Unheated" }
+  ],
+  "tasteProfile": {
+    "summary": "Bold, Earthy, Strong",
+    "sweetness": { "label": "Medium", "percentage": 65 },
+    "intensity": { "label": "High", "percentage": 80 },
+    "texture": { "label": "Thick", "percentage": 75 }
+  },
+  "benefits": [
+    { "icon": "bolt", "title": "Energy", "description": "Boosts stamina naturally." },
+    { "icon": "healing", "title": "Immunity", "description": "Supports immune strength." }
+  ],
+  "labAnalysis": {
+    "batch": "JH-FO-004",
+    "status": "PASSED",
+    "metrics": [
+      { "label": "Purity", "value": "100%", "subtext": "No Adulteration", "percentage": 100, "color": "bg-primary" }
+    ]
+  },
+  "pairings": [
+    { "title": "Warm Water", "description": "Best taken early morning.", "image": "https://images.unsplash.com/photo-1548839140-29a749e1cf4d?q=80&w=800&auto=format&fit=crop" }
+  ]
+},
+{
+  "id": "eucalyptus-honey",
+  "name": "Jerush Eucalyptus Honey",
+  "shortName": "Eucalyptus Honey",
+  "slug": "eucalyptus-honey",
+  "tag": "Aromatic Honey",
+  "tags": ["Eucalyptus", "Respiratory Care"],
+  "shortDescription": "Strong aromatic honey for respiratory health.",
+  "description": "Jerush Eucalyptus Honey has a bold aroma and is traditionally used for cold, cough, and respiratory wellness.",
+  "price": 850,
+  "originalPrice": 980,
+  "discount": "Save 13%",
+  "sizes": ["250gm", "500gm", "1kg"],
+  "sizePrices": {
+    "250gm": 230,
+    "500gm": 440,
+    "1kg": 850
+  },
+  "images": {
+    "main": "img/eucalyptus_main.png",
+    "texture": "img/eucalyptus_texture.png",
+    "source": "img/eucalyptus_source.png",
+    "farm" : "img/adithya_farm2.jpeg"
+  },
+  "features": [
+    { "icon": "air", "label": "Aroma", "value": "Strong" },
+    { "icon": "medical_services", "label": "Use", "value": "Respiratory" }
+  ],
+  "tasteProfile": {
+    "summary": "Strong, Herbal",
+    "sweetness": { "label": "Medium", "percentage": 60 },
+    "intensity": { "label": "High", "percentage": 85 }
+  },
+  "benefits": [
+    { "icon": "healing", "title": "Cold Relief", "description": "Helps soothe cough and cold." }
+  ],
+  "labAnalysis": {
+    "batch": "JH-EU-005",
+    "status": "PASSED",
+    "metrics": [
+      { "label": "Purity", "value": "100%", "subtext": "No Additives", "percentage": 100, "color": "bg-primary" }
+    ]
+  },
+  "pairings": [
+    { "title": "Herbal Tea", "description": "Best with warm tea.", "image": "https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?q=80&w=800&auto=format&fit=crop" }
+  ]
+},
+{
+  "id": "tulsi-honey",
+  "name": "Jerush Tulsi Honey",
+  "shortName": "Tulsi Honey",
+  "slug": "tulsi-honey",
+  "tag": "Ayurvedic Honey",
+  "tags": ["Tulsi", "Immunity Booster"],
+  "shortDescription": "Herbal honey infused with tulsi nectar.",
+  "description": "Jerush Tulsi Honey combines natural honey with the goodness of Tulsi, widely used in Ayurveda for immunity and wellness.",
+  "price": 900,
+  "originalPrice": 1050,
+  "discount": "Save 14%",
+  "sizes": ["250gm", "500gm", "1kg"],
+  "sizePrices": {
+    "250gm": 240,
+    "500gm": 460,
+    "1kg": 900
+  },
+  "images": {
+    "main": "img/tulsi_main.png",
+    "texture": "img/tulsi_texture.png",
+    "source": "img/tulsi_source.png",
+    "farm" : "img/adithya_farm3.jpeg"
+  },
+  "features": [
+    { "icon": "spa", "label": "Ayurvedic", "value": "Yes" },
+    { "icon": "health_and_safety", "label": "Immunity", "value": "High" }
+  ],
+  "tasteProfile": {
+    "summary": "Herbal, Mildly Sweet"
+  },
+  "benefits": [
+    { "icon": "verified_user", "title": "Immunity", "description": "Strengthens immune system." }
+  ],
+  "labAnalysis": {
+    "batch": "JH-TU-006",
+    "status": "PASSED",
+    "metrics": [
+      { "label": "Purity", "value": "100%", "subtext": "No Additives", "percentage": 100, "color": "bg-primary" }
+    ]
+  },
+  "pairings": [
+    { "title": "Warm Water", "description": "Consume daily morning.", "image": "https://images.unsplash.com/photo-1548839140-29a749e1cf4d?q=80&w=800&auto=format&fit=crop" }
+  ]
+}
+
+
+
+
+  ],
+  "oil":[
+    {
+  "id": "coconut-oil",
+  "name": "Jerush Pure Coconut Oil",
+  "shortName": "Coconut Oil",
+  "slug": "coconut-oil",
+  "tag": "Cold Pressed",
+  "tags": ["Edible Oil", "Natural"],
+  "shortDescription": "Pure cold pressed coconut oil.",
+  "description": "Jerush Coconut Oil is extracted using traditional cold pressing methods, suitable for cooking, hair, and skin.",
+  "sizes": ["100ml", "200ml", "500ml", "1liter"],
+  "sizePrices": {
+    "100ml": 60,
+    "200ml": 120,
+    "500ml": 300,
+    "1liter": 600
+  },
+  "images": {
+    "main": "img/oil.jpeg"
+  }
+},
+{
+  "id": "coconut-herbal-hair-oil",
+  "name": "Jerush Coconut Herbal Hair Oil",
+  "shortName": "Herbal Hair Oil",
+  "slug": "coconut-herbal-hair-oil",
+  "tag": "Hair Care",
+  "tags": ["Herbal", "Hair Growth"],
+  "shortDescription": "Herbal infused coconut hair oil.",
+  "description": "Jerush Coconut Herbal Hair Oil is enriched with traditional herbs to reduce hair fall and nourish scalp.",
+  "sizes": ["100ml", "200ml", "500ml", "1liter"],
+  "sizePrices": {
+    "100ml": 100,
+    "200ml": 190,
+    "500ml": 450,
+    "1liter": 900
+  },
+  "images": {
+    "main": "img/oil.jpeg"
+  }
+}
+
+
+  ],
+  "faqs": [
+    {
+      "question": "Why does my honey crystallize?",
+      "answer": "Crystallization is a natural sign of pure raw honey! It happens because of the natural glucose content separating from water. Processed honey often doesn't crystallize because it's been heated or filtered excessively. To liquefy, simply place the jar in warm water."
+    },
+    {
+      "question": "Is this honey safe for children?",
+      "answer": "Yes, it is safe for children over the age of 1 year. Pediatricians recommend avoiding honey for infants under 12 months due to their developing digestive systems."
+    },
+    {
+      "question": "How should I store raw honey?",
+      "answer": "Store it in a cool, dry place away from direct sunlight. There is no need to refrigerate honey; in fact, refrigeration accelerates crystallization. Ensure the lid is tight to keep out moisture."
+    }
+  ]
+}

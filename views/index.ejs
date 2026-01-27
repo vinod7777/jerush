@@ -1,0 +1,590 @@
+<%
+  const getImgPath = (path) => {
+    if (!path) return '';
+    if (path.startsWith('http') || path.startsWith('/')) return path;
+    return '/' + path;
+  }
+%>
+<!DOCTYPE html>
+<html class="light scroll-smooth" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title><%= data.company.name %> - <%= data.company.subtitle %></title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&amp;family=Noto+Sans:ital,wght@0,100..900;1,100..900&amp;display=swap"
+      rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700&amp;display=swap"
+      rel="stylesheet" />
+    <script
+      src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#c98f1d",
+              "primary-dark": "#a67314",
+              "background-light": "#fff8e0",
+              "background-dark": "#2b1d0d",
+              paper: "#ffffff",
+            },
+            fontFamily: {
+              display: ["Noto Serif", "serif"],
+              body: ["Noto Sans", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.5rem",
+              lg: "1rem",
+              xl: "1.5rem",
+              "2xl": "2rem",
+              full: "9999px",
+            },
+            backgroundImage: {
+              "honey-gradient":
+                "linear-gradient(135deg, #F9E076 0%, #c98f1d 100%)",
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #fff8e0;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #c98f1d;
+        border-radius: 4px;
+      }
+      .bg-honeycomb {
+        background-color: #fff;
+        background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuDadeG2qqkTIz7ESLfeQ4d59Oju_9npSssdvkOvahbLGWBGd3k4VaK4BPYeJe5mMwhWfcAXeaTvYr0xaDRyWLxjfgY4OMwXPcEU22pcMWEiF_1ZGosW7tC0XfZKUFxdvvsFX5bRQbTFv-oKyXMjCEdeGDFw5AmCQrV204s7L4cFoSdjF97GtNvF_NsRSk2_QpA1T4pJpCkdkXcPc1Llv5F0F-zZURhw2QA34VtqSYzJWFRA2piA8ZxOVL3NW7XhOIB6RJ3Mr4Rfvwc);
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background-light text-[#1b160e] font-body selection:bg-primary selection:text-white">
+    <nav
+      class="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10 w-full">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+          <a class="flex items-center gap-2 group" href="#">
+            <img src="/img/logo_2.png" alt="<%= data.company.name %> Logo"
+              class="h-16 w-auto group-hover:rotate-12  transition-transform duration-300" />
+            <span
+              class="font-display text-2xl font-bold tracking-tight text-white"><%=
+              data.company.name %></span>
+          </a>
+          <div class="hidden md:flex items-center gap-8">
+            <a
+              class="text-md font-medium text-white/90 hover:text-primary transition-colors"
+              href="#home">Home</a>
+            <a
+              class="text-md font-medium text-white/90 hover:text-primary transition-colors"
+              href="#about">About</a>
+            <a
+              class="text-md font-medium text-white/90 hover:text-primary transition-colors"
+              href="/allproduct">Variants</a>
+            <a
+              class="text-md font-medium text-white/90 hover:text-primary transition-colors"
+              href="#process">Process</a>
+          </div>
+          <div class="flex items-center gap-4">
+            <a
+              class="hidden sm:flex items-center justify-center h-10 px-6 bg-primary hover:bg-primary-dark text-white text-sm font-bold rounded-full transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
+              href="#contact">
+              Order Now
+            </a>
+            <button id="mobile-menu-btn" class="md:hidden p-2 text-white">
+              <span class="material-symbols-outlined">menu</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Mobile Menu -->
+      <div id="mobile-menu"
+        class="hidden md:hidden bg-black/95 backdrop-blur-md border-t border-white/10 absolute top-20 left-0 w-full">
+        <div class="flex flex-col p-6 space-y-4">
+          <a
+            class="text-lg font-medium text-white/90 hover:text-primary transition-colors"
+            href="#home">Home</a>
+          <a
+            class="text-lg font-medium text-white/90 hover:text-primary transition-colors"
+            href="#about">About</a>
+          <a
+            class="text-lg font-medium text-white/90 hover:text-primary transition-colors"
+            href="/allproduct">Variants</a>
+          <a
+            class="text-lg font-medium text-white/90 hover:text-primary transition-colors"
+            href="#process">Process</a>
+          <a
+            class="flex items-center justify-center h-12 px-6 bg-primary hover:bg-primary-dark text-white text-base font-bold rounded-xl transition-all duration-300 shadow-md"
+            href="#contact">Order Now</a>
+        </div>
+      </div>
+    </nav>
+    <section
+      class="relative min-h-[100vh] flex  items-center justify-center pt-20 overflow-hidden w-full"
+      id="home">
+      <div class="absolute inset-0 z-0 w-full">
+        <div
+          class="absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-100 hero-slide">
+          <img src="/img/hero-honey.jpg" alt="Hero Background"
+            class="w-full h-full object-cover" />
+        </div>
+        <div
+          class="absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-0 hero-slide">
+          <img src="/img/bottles.png" alt="Hero Background"
+            class="w-full h-full object-cover" />
+        </div>
+        <div
+          class="absolute inset-0 transition-opacity duration-1000 ease-in-out opacity-0 hero-slide">
+          <img src="/img/preview1600_1000.jpg" alt="Hero Background"
+            class="w-full h-full object-cover" />
+        </div>
+        <div class="absolute inset-0 bg-black/30 backdrop-blur-sm z-10"></div>
+      </div>
+
+      <div
+        class="relative z-10 container mx-auto px-4 flex flex-col items-center text-center max-w-4xl">
+        <div class="mb-6">
+          <span
+            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 text-white text-xs font-bold uppercase tracking-wider mb-6">
+            <span class="material-symbols-outlined text-sm">verified</span> 100%
+            Pure Organic Honey
+          </span>
+          <h1
+            class="font-display text-5xl md:text-7xl lg:text-8xl font-black bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 via-amber-500 to-yellow-300 drop-shadow-[0_0_15px_rgba(245,158,11,0.6)] mb-4">
+            <%= data.company.name %>
+          </h1>
+          <p
+            class="font-display text-2xl md:text-3xl font-medium text-yellow-100 italic drop-shadow-md">
+            <%= data.company.subtitle %>
+          </p>
+        </div>
+        <p
+          class="text-white/90 text-lg md:text-xl max-w-2xl mb-10 leading-relaxed font-body drop-shadow-sm">
+          <%= data.company.description %>
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+          <a
+            class="flex items-center justify-center gap-2 h-14 px-8 bg-primary text-white text-base font-bold rounded-xl transition-all hover:bg-primary-dark hover:scale-105 shadow-[0_0_20px_rgba(201,143,29,0.4)] border border-yellow-400/30"
+            href="#variants">
+            <span>Explore Our Honey</span>
+            <span
+              class="material-symbols-outlined text-sm">arrow_downward</span>
+          </a>
+          <a
+            class="flex items-center justify-center gap-2 h-14 px-8 bg-white text-[#2b1d0d] text-base font-bold rounded-xl transition-all hover:bg-gray-50 hover:scale-105 shadow-xl"
+            href="<%= data.company.contact.whatsapp %>?text=Hi,%20I%20would%20like%20to%20order%20<%= data.company.name %>%20Honey"
+            target="_blank">
+            <span class="material-symbols-outlined text-green-600">chat</span>
+            <span>Order on WhatsApp</span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section
+      class="relative py-24 bg-honeycomb overflow-hidden w-full"
+      id="about">
+      <div
+        class="container mx-auto px-6 md:px-12 relative z-10 max-w-full overflow-x-hidden">
+        <div class="flex flex-col lg:flex-row items-center gap-16">
+          <div class="flex-1 order-2 lg:order-1 relative">
+            <div class="relative group max-w-md mx-auto">
+              <div
+                class="absolute -inset-4 bg-primary/20 rounded-2xl transform rotate-3 transition-transform duration-500"></div>
+              <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+                <img
+                  alt="Beekeeper inspecting a honeycomb frame in sunlight"
+                  class="w-full h-full object-cover"
+                  src="/img/aditya.jpeg" />
+              </div>
+              <div
+                class="absolute -bottom-8 -right-4 w-32 h-32 bg-background-light rounded-full flex items-center justify-center shadow-lg p-2 z-20">
+                <div
+                  class="w-full h-full border-2 border-dashed border-primary rounded-full flex items-center justify-center flex-col text-center">
+                  <span
+                    class="font-display font-bold text-2xl text-primary">100%</span>
+                  <span
+                    class="text-xs font-bold uppercase tracking-wide text-[#1b160e]">Natural</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex-1 order-1 lg:order-2 space-y-6">
+            <span
+              class="text-primary font-bold tracking-widest uppercase text-sm">Our
+              Story</span>
+            <h2
+              class="font-display text-4xl md:text-5xl font-bold text-[#1b160e] leading-tight">
+              The Essence of <br /><span
+                class="text-primary decoration-wavy underline decoration-2 underline-offset-4">The
+                Hive</span>
+            </h2>
+            <p class="text-lg text-gray-700 leading-relaxed">
+              <%= data.company.name %> was born from a simple belief: nature
+              knows best. Our
+              journey begins in the untouched wildflower fields where our bees
+              roam freely. We practice
+              <strong class="text-[#1b160e]">slow beekeeping</strong>, ensuring
+              we never take more than the hive can spare.
+            </p>
+            <p class="text-lg text-gray-700 leading-relaxed">
+              From the moment the nectar is gathered to the final seal on our
+              jars, we preserve the raw integrity of the honey. No additives, no
+              excessive heating—just pure, liquid gold as nature intended.
+            </p>
+            <div class="pt-4">
+              <button
+                class="flex items-center gap-2 text-[#1b160e] font-bold border-b-2 border-primary pb-1 hover:text-primary transition-colors">
+                Read Full Story
+                <span
+                  class="material-symbols-outlined text-sm">arrow_forward</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
+      class="py-20 bg-background-light border-y border-[#efe6d5] w-full overflow-hidden">
+      <div class="container mx-auto px-6 max-w-full">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <h3 class="font-display text-3xl font-bold text-[#1b160e] mb-4">
+            Why Choose <%= data.company.name %>?
+          </h3>
+          <p class="text-gray-600">
+            We don't just sell honey; we deliver a promise of purity, health,
+            and ethical sourcing.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <% data.features.forEach(feature => { %>
+          <div
+            class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 group text-center border border-transparent hover:border-primary/20">
+            <div
+              class="w-16 h-16 mx-auto bg-primary/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors text-primary">
+              <span class="material-symbols-outlined text-3xl"><%= feature.icon
+                %></span>
+            </div>
+            <h4 class="font-display text-lg font-bold mb-2"><%= feature.title
+              %></h4>
+            <p class="text-sm text-gray-600"><%= feature.description %></p>
+          </div>
+          <% }) %>
+        </div>
+      </div>
+    </section>
+    <section
+      class="py-24 bg-white relative overflow-hidden w-full"
+      id="variants">
+      <div
+        class="absolute top-0 right-0 w-1/3 h-full bg-background-light/30 skew-x-12 transform origin-top-right pointer-events-none"></div>
+      <div class="container mx-auto px-6 relative z-10 max-w-full">
+        <div
+          class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+          <div class="max-w-xl">
+            <h2 class="font-display text-4xl font-bold text-[#1b160e] mb-4">
+              Our Golden Collection
+            </h2>
+            <p class="text-gray-600 text-lg">
+              Choose between the robust intensity of our Raw Honey or the
+              delicate smoothness of our Pure Honey.
+            </p>
+          </div>
+          <a
+            class="hidden md:flex items-center gap-2 text-primary font-bold hover:text-primary-dark"
+            href="/allproduct">
+            View All Products
+            <span class="material-symbols-outlined">arrow_forward</span>
+          </a>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <% data.products.slice(0, 2).forEach(product => { %>
+          <div
+            class="group relative bg-[#fffdf5] rounded-3xl overflow-hidden border border-[#f3efe8] hover:border-primary/30 transition-all duration-300 hover:shadow-2xl">
+            <div class="absolute top-6 left-6 z-20">
+              <span
+                class="px-4 py-2 <%= product.id === 'raw-honey' ? 'bg-[#2b1d0d]' : 'bg-primary' %> text-white text-xs font-bold uppercase tracking-wider rounded-lg shadow-lg">
+                <%= product.tag %>
+              </span>
+            </div>
+            <div class="h-[400px] w-full relative overflow-hidden bg-gray-100">
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
+              <img alt="<%= product.name %>"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                src="<%= getImgPath(product.images.main) %>" />
+              <div class="absolute bottom-6 left-6 z-20 text-white">
+                <h3 class="font-display text-3xl font-bold mb-1"><%=
+                  product.shortName %></h3>
+                <p class="text-white/80 text-sm"><%= product.shortDescription
+                  %></p>
+              </div>
+            </div>
+            <div class="p-8">
+              <div class="flex justify-between items-center mb-4">
+                <div>
+                  <p class="text-xs text-gray-500 uppercase tracking-wide">Taste
+                    Profile</p>
+                  <p class="font-medium text-[#1b160e]"><%=
+                    product.tasteProfile.summary %></p>
+                </div>
+                <div class="text-right">
+                  <p
+                    class="text-xs text-gray-500 uppercase tracking-wide">Size</p>
+                  <p class="font-medium text-[#1b160e]"><%=
+                    product.sizes.join(' / ') %></p>
+                </div>
+              </div>
+              <div class="flex items-center gap-3 mb-4">
+                <span class="text-2xl font-bold text-primary">₹<%= product.price
+                  %></span>
+                <span class="text-sm text-gray-400 line-through">₹<%=
+                  product.originalPrice %></span>
+                <span class="text-green-600 text-xs font-bold"><%=
+                  product.discount %></span>
+              </div>
+              <a href="/product/<%= product.slug %>"
+                class="w-full h-12 mt-2 border-2 border-[#1b160e] text-[#1b160e] font-bold rounded-xl hover:bg-[#1b160e] hover:text-white transition-colors flex items-center justify-center gap-2">
+                More Details
+                <span
+                  class="material-symbols-outlined text-sm">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+          <% }) %>
+        </div>
+      </div>
+    </section>
+    <section
+      class="py-24 bg-background-light overflow-hidden w-full"
+      id="process">
+      <div class="container mx-auto px-6 max-w-5xl overflow-hidden">
+        <div class="text-center mb-16">
+          <span
+            class="text-primary font-bold tracking-widest uppercase text-sm">Hive
+            to Home</span>
+          <h2
+            class="font-display text-3xl md:text-4xl font-bold text-[#1b160e] mt-2">
+            The Journey of Purity
+          </h2>
+        </div>
+        <div class="relative">
+          <div
+            class="absolute left-8 md:left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-primary/10 via-primary to-primary/10 -translate-x-1/2 md:translate-x-0 rounded-full"></div>
+          <div class="space-y-12">
+            <% data.process.forEach((step, index) => { %>
+            <div
+              class="relative flex flex-col md:flex-row items-center md:justify-between group w-full overflow-hidden">
+              <div
+                class="w-full md:w-5/12 order-2 <%= index % 2 === 0 ? 'md:order-1 pl-20 md:pl-0 md:text-right pr-6' : 'md:order-3 pl-20 md:pl-6' %>">
+                <h4 class="font-display text-xl font-bold text-[#1b160e]"><%=
+                  step.title %></h4>
+                <p class="text-gray-600 mt-2 text-sm"><%= step.description
+                  %></p>
+              </div>
+              <div
+                class="absolute left-8 md:left-1/2 -translate-x-1/2 w-12 h-12 bg-white border-4 border-primary rounded-full flex items-center justify-center z-10 shadow-lg group-hover:scale-110 transition-transform">
+                <span class="material-symbols-outlined text-primary text-xl"><%=
+                  step.icon %></span>
+              </div>
+              <div
+                class="w-full md:w-5/12 order-3 <%= index % 2 === 0 ? 'md:order-3 pl-20 md:pl-6' : 'md:order-1 pl-20 md:pl-0 pr-6' %> hidden md:block">
+                <div class="h-40 w-full rounded-xl overflow-hidden shadow-md">
+                  <img alt="<%= step.title %>"
+                    class="w-full h-full object-cover"
+                    src="<%= getImgPath(step.image) %>" />
+                </div>
+              </div>
+            </div>
+            <% }) %>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
+      class="py-24 bg-[#2b1d0d] relative overflow-hidden w-full"
+      id="contact">
+      <div
+        class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+        <svg
+          class="w-full h-full"
+          preserveAspectRatio="none"
+          viewBox="0 0 100 100">
+          <path d="M0 100 C 20 0 50 0 100 100 Z" fill="#c98f1d"></path>
+        </svg>
+      </div>
+      <div class="container mx-auto px-6 relative z-10 text-center max-w-full">
+        <div class="max-w-3xl mx-auto">
+          <img src="/img/bottles.png" alt="Jerush Honey Bottles"
+            class="w-full max-w-lg mx-auto  mb-8 drop-shadow-2xl hover:scale-105  transition-transform duration-500 rounded-xl " />
+          <h2
+            class="font-display text-4xl md:text-5xl font-bold text-white mb-6">
+            Ready to Taste the Difference?
+          </h2>
+          <p class="text-white/70 text-lg mb-10 leading-relaxed">
+            Join thousands of happy customers who have switched to Jerush pure
+            honey. Order directly via WhatsApp for quick delivery and personal
+            support.
+          </p>
+          <div class="flex flex-col sm:flex-row justify-center gap-6">
+            <a
+              href="<%= data.company.contact.whatsapp %>?text=Hi,%20I%20would%20like%20to%20order%20<%= data.company.name %>%20Honey"
+              target="_blank"
+              class="relative flex items-center justify-center gap-3 h-16 px-10 bg-primary hover:bg-[#dca63d] text-[#2b1d0d] text-lg font-bold rounded-full transition-all duration-300 transform hover:scale-105 shadow-2xl">
+              <span class="material-symbols-outlined">chat</span>
+              Order on WhatsApp
+            </a>
+            <a href="/allproduct"
+              class="flex items-center justify-center gap-3 h-16 px-10 bg-transparent border-2 border-white/20 hover:bg-white/10 text-white text-lg font-bold rounded-full transition-all duration-300">
+              View Products
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer
+      class="bg-[#1e1409] text-white/60 py-16 border-t border-white/5 font-body w-full overflow-hidden">
+      <div class="container mx-auto px-6 max-w-full">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+          <div class="col-span-1 md:col-span-1">
+            <a class="flex items-center gap-2 mb-6 text-white" href="#">
+              <img src="/img/logo_2.png" alt="<%= data.company.name %> Logo"
+                class="h-16 w-auto" />
+              <span class="font-display text-3xl font-bold"><%=
+                data.company.name %></span>
+            </a>
+            <p class="text-sm leading-relaxed mb-6">
+              <%= data.company.description %>
+            </p>
+            <div class="flex gap-4">
+              
+              <a
+                class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary hover:text-[#2b1d0d] transition-all"
+                href="<%= data.company.social.instagram %>">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"
+                  aria-hidden="true"><path fill-rule="evenodd"
+                    d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772 4.902 4.902 0 011.772-1.153c.636-.247 1.363-.416 2.427-.465 1.067-.047 1.409-.06 3.809-.06zm1.493 13.301c-3.218 0-5.831-2.613-5.831-5.831 0-3.218 2.613-5.831 5.831-5.831 3.218 0 5.831 2.613 5.831 5.831 0 3.218-2.613 5.831-5.831 5.831zm-5.831-10c-2.305 0-4.169 1.864-4.169 4.169 0 2.305 1.864 4.169 4.169 4.169 2.305 0 4.169-1.864 4.169-4.169 0-2.305-1.864-4.169-4.169-4.169zm8.555-2.168c-.779 0-1.411.632-1.411 1.411 0 .779.632 1.411 1.411 1.411.779 0 1.411-.632 1.411-1.411 0-.779-.632-1.411-1.411-1.411z"
+                    clip-rule="evenodd" /></svg>
+              </a>
+              <a
+                class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary hover:text-[#2b1d0d] transition-all"
+                href="<%= data.company.contact.whatsapp %>">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"
+                  aria-hidden="true"><path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" /></svg>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h4 class="text-white font-bold mb-6 font-display">Quick Links</h4>
+            <ul class="space-y-4 text-sm">
+              <li>
+                <a class="hover:text-primary transition-colors"
+                  href="#home">Home</a>
+              </li>
+              <li>
+                <a class="hover:text-primary transition-colors"
+                  href="#about">Our Story</a>
+              </li>
+              <li>
+                <a class="hover:text-primary transition-colors"
+                  href="/allproduct">Honey Variants</a>
+              </li>
+              <li>
+                <a class="hover:text-primary transition-colors"
+                  href="#process">Process</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-white font-bold mb-6 font-display">Legal</h4>
+            <ul class="space-y-4 text-sm">
+              <li>
+                <a class="hover:text-primary transition-colors" href="#">Privacy
+                  Policy</a>
+              </li>
+              <li>
+                <a class="hover:text-primary transition-colors" href="#">Terms
+                  of Service</a>
+              </li>
+              <li>
+                <a class="hover:text-primary transition-colors"
+                  href="#">Shipping Policy</a>
+              </li>
+              <li>
+                <a class="hover:text-primary transition-colors" href="#">Refund
+                  Policy</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-white font-bold mb-6 font-display">Contact Us</h4>
+            <ul class="space-y-4 text-sm">
+              <li class="flex items-start gap-3">
+                <span
+                  class="material-symbols-outlined text-primary text-lg mt-0.5">location_on</span>
+                <span><%= data.company.contact.address %></span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span
+                  class="material-symbols-outlined text-primary text-lg">call</span>
+                <span><%= data.company.contact.phone %></span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span
+                  class="material-symbols-outlined text-primary text-lg">mail</span>
+                <span><%= data.company.contact.email %></span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="pt-8 border-t border-white/5  items-center gap-4 text-sm">
+          <p class="text-center">© 2025 <%= data.company.name %> Honey. All
+            rights reserved.</p>
+
+        </div>
+      </div>
+    </footer>
+    <script>
+      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        const icon = mobileMenuBtn.querySelector('span');
+        icon.textContent = mobileMenu.classList.contains('hidden') ? 'menu' : 'close';
+      });
+
+      mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+          mobileMenuBtn.querySelector('span').textContent = 'menu';
+        });
+      });
+
+      const slides = document.querySelectorAll('.hero-slide');
+      let currentSlide = 0;
+      
+      setInterval(() => {
+        slides[currentSlide].classList.remove('opacity-100');
+        slides[currentSlide].classList.add('opacity-0');
+        
+        currentSlide = (currentSlide + 1) % slides.length;
+        
+        slides[currentSlide].classList.remove('opacity-0');
+        slides[currentSlide].classList.add('opacity-100');
+      }, 5000);
+    </script>
+  </body>
+</html>
