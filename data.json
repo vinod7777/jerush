@@ -311,9 +311,9 @@
     "1kg": 850
   },
   "images": {
-    "main": "img/eucalyptus_main.png",
-    "texture": "img/eucalyptus_texture.png",
-    "source": "img/eucalyptus_source.png",
+    "main": "img/Eucalyptus_main.png",
+    "texture": "img/Eucalyptus_texture.png",
+    "source": "img/Eucalyptus_source.png",
     "farm" : "img/adithya_farm2.jpeg"
   },
   "features": [
