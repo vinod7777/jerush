@@ -6,14 +6,17 @@ const fs = require('fs');
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
+
+
+
 app.use(express.static(path.join(__dirname, 'static')));
 app.use('/img', express.static(path.join(__dirname, 'img')));
 
 
-const loadData = () => {
+function loadData() {
     const data = fs.readFileSync(path.join(__dirname, 'data.json'), 'utf8');
     return JSON.parse(data);
-};
+}
 
 app.get('/', (req, res) => {
     res.render('index', { data: loadData() });
