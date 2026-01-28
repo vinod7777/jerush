@@ -76,9 +76,9 @@
       "price": 650,
       "originalPrice": 750,
       "discount": "Save 13%",
-      "sizes": ["250gm", "500gm", "1kg"],
+      "sizes": [ "500gm", "1kg"],
       "sizePrices": {
-        "250gm": 170,
+        
         "500gm": 340,
         "1kg": 650
       },
@@ -138,9 +138,9 @@
       "price": 650,
       "originalPrice": 750,
       "discount": "Save 13%",
-      "sizes": ["250gm", "500gm", "1kg"],
+      "sizes": [ "500gm", "1kg"],
       "sizePrices": {
-        "250gm": 170,
+      
         "500gm": 340,
         "1kg": 650
       },
@@ -198,9 +198,8 @@
   "price": 650,
   "originalPrice": 750,
   "discount": "Save 13%",
-  "sizes": ["250gm", "500gm", "1kg"],
+  "sizes": [ "500gm", "1kg"],
   "sizePrices": {
-    "250gm": 170,
     "500gm": 340,
     "1kg": 650
   },
@@ -254,9 +253,8 @@
   "price": 670,
   "originalPrice": 780,
   "discount": "Save 14%",
-  "sizes": ["250gm", "500gm", "1kg"],
+  "sizes": [ "500gm", "1kg"],
   "sizePrices": {
-    "250gm": 190,
     "500gm": 350,
     "1kg": 670
   },
@@ -304,9 +302,8 @@
   "price": 850,
   "originalPrice": 980,
   "discount": "Save 13%",
-  "sizes": ["250gm", "500gm", "1kg"],
+  "sizes": ["500gm", "1kg"],
   "sizePrices": {
-    "250gm": 230,
     "500gm": 440,
     "1kg": 850
   },
@@ -351,9 +348,8 @@
   "price": 900,
   "originalPrice": 1050,
   "discount": "Save 14%",
-  "sizes": ["250gm", "500gm", "1kg"],
+  "sizes": ["500gm", "1kg"],
   "sizePrices": {
-    "250gm": 240,
     "500gm": 460,
     "1kg": 900
   },
@@ -399,10 +395,8 @@
   "tags": ["Edible Oil", "Natural"],
   "shortDescription": "Pure cold pressed coconut oil.",
   "description": "Jerush Coconut Oil is extracted using traditional cold pressing methods, suitable for cooking, hair, and skin.",
-  "sizes": ["100ml", "200ml", "500ml", "1liter"],
+  "sizes": ["500ml", "1liter"],
   "sizePrices": {
-    "100ml": 60,
-    "200ml": 120,
     "500ml": 300,
     "1liter": 600
   },
@@ -419,10 +413,8 @@
   "tags": ["Herbal", "Hair Growth"],
   "shortDescription": "Herbal infused coconut hair oil.",
   "description": "Jerush Coconut Herbal Hair Oil is enriched with traditional herbs to reduce hair fall and nourish scalp.",
-  "sizes": ["100ml", "200ml", "500ml", "1liter"],
+  "sizes": ["500ml", "1liter"],
   "sizePrices": {
-    "100ml": 100,
-    "200ml": 190,
     "500ml": 450,
     "1liter": 900
   },

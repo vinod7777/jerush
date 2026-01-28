@@ -25,8 +25,19 @@ app.get('/', (req, res) => {
 app.get('/product/:slug', (req, res) => {
     const data = loadData();
     const product = data.products.find(p => p.slug === req.params.slug);
-    if (!product) return res.status(404).send('Product not found');
-    res.render('product', { product, data });
+    if (product) {
+        return res.render('honey-product', { product, data });
+    }
+    res.status(404).send('Product not found');
+});
+
+app.get('/oil/:slug', (req, res) => {
+    const data = loadData();
+    const product = data.oil.find(p => p.slug === req.params.slug);
+    if (product) {
+        return res.render('oil-product', { product, data });
+    }
+    res.status(404).send('Oil product not found');
 });
 
 app.get('/allproduct', (req, res) => {
